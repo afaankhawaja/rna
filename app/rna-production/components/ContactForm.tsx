@@ -65,24 +65,25 @@ export default function ContactForm() {
             style={{ backgroundColor: reason ? 'rgba(255, 255, 255, 0.1)' : '' }}
           >
             <option value="" disabled className="bg-[var(--deep-teal)] text-white">Select a reason</option>
-            <option value="information" className="bg-[var(--deep-teal)] text-white">Information Purpose</option>
-            <option value="suggestion" className="bg-[var(--deep-teal)] text-white">Suggestion</option>
-            <option value="complaint" className="bg-[var(--deep-teal)] text-white">Complaint</option>
-            <option value="booking" className="bg-[var(--deep-teal)] text-white">Booking Inquiry</option>
+            <option value="wedding" className="bg-[var(--deep-teal)] text-white">Wedding Photography/Videography</option>
+            <option value="event" className="bg-[var(--deep-teal)] text-white">Event Photography/Videography</option>
+            <option value="fashion" className="bg-[var(--deep-teal)] text-white">Model & Fashion Photography</option>
+            <option value="corporate" className="bg-[var(--deep-teal)] text-white">Corporate Content Creation</option>
+            <option value="other" className="bg-[var(--deep-teal)] text-white">Other Inquiry</option>
           </select>
         </div>
       </div>
 
-      {reason === 'booking' && (
+      {['wedding', 'event', 'fashion', 'corporate'].includes(reason) && (
         <div className="animate-in fade-in slide-in-from-top-4 duration-500">
-          <label htmlFor="destination" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-            Destination / Travel Dates (Specific Details)
+          <label htmlFor="event-date" className="block text-sm font-medium mb-2 uppercase tracking-wider">
+            Event Date / Preferred Schedule
           </label>
           <input
             type="text"
-            id="destination"
+            id="event-date"
             className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/50 focus:outline-none focus:border-[var(--brand-orange)] transition-colors"
-            placeholder="E.g., Dubai, Next Month"
+            placeholder="E.g., December 15th, 2024"
             required
           />
         </div>
@@ -90,13 +91,13 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-          Message / Details
+          Message / Project Details
         </label>
         <textarea
           id="message"
           rows={5}
           className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/50 focus:outline-none focus:border-[var(--brand-orange)] transition-colors resize-none"
-          placeholder="How can we help you?"
+          placeholder="Tell us about your project or event..."
           required
         ></textarea>
       </div>

@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-(--deep-teal) font-mont text-gray-300 mt-20">
+    <footer className="bg-(--deep-teal) font-mont text-(--neutral-white) mt-20">
 
       {/* Main Footer */}
 
@@ -21,10 +21,10 @@ const Footer = () => {
 
           <div>
 
-            <div className="relative w-28 h-28 mb-5">
+            <div className="relative w-28 h-28 mb-5 -ml-7">
 
               <Image
-                src="/assets/images/RNA-Traders-02.png"
+                src="/assets/icons/RNA All Logos-02.svg"
                 alt="Company Logo"
                 fill
                 className="object-contain"
@@ -32,7 +32,7 @@ const Footer = () => {
 
             </div>
 
-            <p className="text-sm leading-7 text-(--cool-gray) font-mont">
+            <p className="text-sm leading-7 text-(--accent-sky) font-mont">
             RNA Traders — Connecting Services, Creating Values.
             </p>
 
@@ -46,28 +46,28 @@ const Footer = () => {
               Quick Links
             </h3>
 
-            <ul className="space-y-3 font-mont text-(--cool-gray)">
+            <ul className="space-y-3 font-mont text-(--accent-sky)">
 
               <li>
-                <Link href="/" className="hover:text-white transition">
+                <Link href="/" className="hover:text-(--neutral-white) transition">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-(--neutral-white) transition">
                   About
                 </Link>
               </li>
 
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-(--neutral-white) transition">
                   Services
                 </Link>
               </li>
 
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-(--neutral-white) transition">
                   Contact
                 </Link>
               </li>
@@ -84,7 +84,7 @@ const Footer = () => {
               Contact
             </h3>
 
-            <div className="space-y-3 text-sm text-(--cool-gray)">
+            <div className="space-y-3 text-sm text-(--accent-sky)">
 
               <p>8376 Hail St. Al Baghdadia, Jeddah, Saudi Arabia </p>
 
@@ -108,28 +108,28 @@ const Footer = () => {
 
               <a
                 href="#"
-                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-white hover:text-slate-900 transition flex items-center justify-center"
+                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
               >
                 <FaFacebookF />
               </a>
 
               <a
                 href="#"
-                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-white hover:text-slate-900 transition flex items-center justify-center"
+                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
               >
                 <FaInstagram />
               </a>
 
               <a
                 href="#"
-                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-white hover:text-slate-900 transition flex items-center justify-center"
+                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
               >
                 <FaLinkedinIn />
               </a>
 
               <a
                 href="#"
-                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-white hover:text-slate-900 transition flex items-center justify-center"
+                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
               >
                 <FaYoutube />
               </a>
@@ -148,17 +148,17 @@ const Footer = () => {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
 
-          <p className="text-sm text-(--cool-gray)">
+          <p className="text-sm text-(--accent-sky)">
             © {new Date().getFullYear()} Company. All Rights Reserved.
           </p>
 
-          <div className="flex gap-6 text-sm">
+          <div className="flex gap-6 text-sm text-(--accent-sky)">
 
-            <Link href="#" className="hover:text-white transition">
+            <Link href="#" className="hover:text-(--neutral-white) transition">
               Privacy Policy
             </Link>
 
-            <Link href="#" className="hover:text-white transition">
+            <Link href="#" className="hover:text-(--neutral-white) transition">
               Terms & Conditions
             </Link>
 

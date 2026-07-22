@@ -16,7 +16,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-            Full Name
+            Full Name / Company
           </label>
           <input
             type="text"
@@ -54,7 +54,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="reason" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-            Reason for Contact
+            Service Required
           </label>
           <select
             id="reason"
@@ -64,29 +64,14 @@ export default function ContactForm() {
             required
             style={{ backgroundColor: reason ? 'rgba(255, 255, 255, 0.1)' : '' }}
           >
-            <option value="" disabled className="bg-[var(--deep-teal)] text-white">Select a reason</option>
-            <option value="information" className="bg-[var(--deep-teal)] text-white">Information Purpose</option>
-            <option value="suggestion" className="bg-[var(--deep-teal)] text-white">Suggestion</option>
-            <option value="complaint" className="bg-[var(--deep-teal)] text-white">Complaint</option>
-            <option value="booking" className="bg-[var(--deep-teal)] text-white">Booking Inquiry</option>
+            <option value="" disabled className="bg-[var(--deep-teal)] text-white">Select a service</option>
+            <option value="government" className="bg-[var(--deep-teal)] text-white">Government Processing</option>
+            <option value="documentation" className="bg-[var(--deep-teal)] text-white">Official Documentation</option>
+            <option value="consultancy" className="bg-[var(--deep-teal)] text-white">Professional Consultancy</option>
+            <option value="other" className="bg-[var(--deep-teal)] text-white">Other Inquiry</option>
           </select>
         </div>
       </div>
-
-      {reason === 'booking' && (
-        <div className="animate-in fade-in slide-in-from-top-4 duration-500">
-          <label htmlFor="destination" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-            Destination / Travel Dates (Specific Details)
-          </label>
-          <input
-            type="text"
-            id="destination"
-            className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/50 focus:outline-none focus:border-[var(--brand-orange)] transition-colors"
-            placeholder="E.g., Dubai, Next Month"
-            required
-          />
-        </div>
-      )}
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-2 uppercase tracking-wider">
@@ -96,7 +81,7 @@ export default function ContactForm() {
           id="message"
           rows={5}
           className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/50 focus:outline-none focus:border-[var(--brand-orange)] transition-colors resize-none"
-          placeholder="How can we help you?"
+          placeholder="Please describe your requirements in detail..."
           required
         ></textarea>
       </div>

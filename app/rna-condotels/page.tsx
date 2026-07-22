@@ -1,14 +1,14 @@
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
-export default function RnaTravelsPage() {
+export default function RnaCondotelsPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white font-mont overflow-hidden">
       {/* Hero Section */}
       <section className="relative w-full min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-end bg-black pb-20 md:pb-28">
         <Image
-          src="/assets/images/flight-1.jpg"
-          alt="Flight Background"
+          src="/assets/images/card-condotels.jpg"
+          alt="RNA Condotels Background"
           fill
           className="object-cover opacity-60"
           priority
@@ -16,15 +16,15 @@ export default function RnaTravelsPage() {
         <div className="z-10 flex flex-col items-center mt-32 md:mt-48">
           <div className="relative w-56 h-56 md:w-80 md:h-80 mb-2 md:mb-4 drop-shadow-2xl">
             <Image
-              src="/assets/images/RNA-Travels-02.png"
-              alt="RNA Travels Logo"
+              src="/assets/images/RNA-Condotels-02.png"
+              alt="RNA Condotels Logo"
               fill
               className="object-cover scale-130"
               priority
             />
           </div>
           <h1 className="text-white text-2xl md:text-4xl lg:text-4xl tracking-[0.1em] font-normal uppercase text-center px-4 drop-shadow-lg">
-            RNA Travels (Booking Company)
+            RNA Condotel (Service Apartments)
           </h1>
         </div>
       </section>
@@ -44,19 +44,22 @@ export default function RnaTravelsPage() {
           </h2>
           <div className="space-y-6 md:space-y-8 text-[var(--deep-teal)] text-lg md:text-xl leading-relaxed">
             <p>
-              Welcome to RNA Travels, your trusted travel partner in Jeddah, dedicated to making every journey simple, affordable, and stress-free. With years of experience in the travel industry, we provide complete travel solutions including airline ticket bookings, hotel reservations, holiday packages, guided tours, and visa processing services for individuals, families, and corporate clients.
+              Welcome to RNA Condotel, where comfort, convenience, and quality living come together to create a truly exceptional stay experience. Located on Old Makkah Road, Jeddah, Saudi Arabia, 22525, RNA Condotel offers modern and fully furnished service apartments designed for both short-term and long-term stays.
             </p>
             <p>
-              At RNA Travels, we believe that travel should be convenient and accessible for everyone. Whether you are planning a business trip, family vacation, religious journey, or an international getaway, our experienced team is committed to finding the best travel options tailored to your needs and budget.
+              We provide a variety of accommodation options to suit different needs and lifestyles, including 2-bedroom apartments, 1-bedroom apartments, and studio apartments. Each unit is thoughtfully designed to offer a comfortable, private, and relaxing environment, making it ideal for families, business travelers, and individual guests alike.
             </p>
             <p>
-              We proudly offer exclusive travel deals and special offers across GCC countries, helping our customers enjoy exceptional value on flights, accommodations, and tour packages throughout the region. Our strong network of travel partners enables us to deliver reliable service, competitive pricing, and seamless travel experiences.
+              In addition to our Old Makkah Road property, we also offer premium apartments in Ar Rawdah, near the Egypt Consulate on Madinah Road, behind Saadeddin Pastry, providing guests with another convenient location in one of Jeddah’s most sought-after neighborhoods.
             </p>
             <p>
-              From your first inquiry to your final destination, RNA Travels is committed to providing professional support, personalized service, and unforgettable travel experiences every step of the way.
+              At RNA Condotel, we are committed to delivering excellent hospitality through well-maintained accommodations, and attentive customer service. Our strategic locations provide convenient access to key business districts, shopping destinations, dining venues, and major attractions throughout Jeddah.
+            </p>
+            <p>
+              Whether you are visiting for business, relocation, or leisure, RNA Condotel offers the perfect balance of comfort, convenience, and value.
             </p>
             <p className="font-medium text-[var(--dark-slate)]">
-              RNA Travels – Your Journey, Our Priority.
+              RNA Condotel – Your Home Away From Home in Jeddah.
             </p>
           </div>
         </div>

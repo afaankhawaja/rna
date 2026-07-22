@@ -16,13 +16,13 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-            Full Name
+            Full Name / Company Name
           </label>
           <input
             type="text"
             id="name"
             className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/50 focus:outline-none focus:border-[var(--brand-orange)] transition-colors"
-            placeholder="John Doe"
+            placeholder="John Doe / Acme Corp"
             required
           />
         </div>
@@ -65,24 +65,24 @@ export default function ContactForm() {
             style={{ backgroundColor: reason ? 'rgba(255, 255, 255, 0.1)' : '' }}
           >
             <option value="" disabled className="bg-[var(--deep-teal)] text-white">Select a reason</option>
-            <option value="information" className="bg-[var(--deep-teal)] text-white">Information Purpose</option>
-            <option value="suggestion" className="bg-[var(--deep-teal)] text-white">Suggestion</option>
-            <option value="complaint" className="bg-[var(--deep-teal)] text-white">Complaint</option>
-            <option value="booking" className="bg-[var(--deep-teal)] text-white">Booking Inquiry</option>
+            <option value="inquiry" className="bg-[var(--deep-teal)] text-white">Product Inquiry</option>
+            <option value="quote" className="bg-[var(--deep-teal)] text-white">Request a Quote</option>
+            <option value="partnership" className="bg-[var(--deep-teal)] text-white">Partnership Opportunities</option>
+            <option value="support" className="bg-[var(--deep-teal)] text-white">Support / General Information</option>
           </select>
         </div>
       </div>
 
-      {reason === 'booking' && (
+      {(reason === 'inquiry' || reason === 'quote') && (
         <div className="animate-in fade-in slide-in-from-top-4 duration-500">
-          <label htmlFor="destination" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-            Destination / Travel Dates (Specific Details)
+          <label htmlFor="product-details" className="block text-sm font-medium mb-2 uppercase tracking-wider">
+            Product Category / Requirements
           </label>
           <input
             type="text"
-            id="destination"
+            id="product-details"
             className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/50 focus:outline-none focus:border-[var(--brand-orange)] transition-colors"
-            placeholder="E.g., Dubai, Next Month"
+            placeholder="E.g., Bulk order of electronics, 500 units"
             required
           />
         </div>

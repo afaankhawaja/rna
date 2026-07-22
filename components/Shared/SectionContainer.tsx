@@ -9,7 +9,7 @@ interface Props {
         max-w-7xl
         mx-auto
         px-6
-        sm:px-0
+        sm:px-8
         lg:px-0
         xl:px-0
         relative z-10
