@@ -20,7 +20,7 @@
 @theme inline {
 
 
-  --font-mont: var(--font-mont)
+  --font-mont: var(--font-mont);
 
   --color-brand-orange: var(--brand-orange);
   --color-brand-yellow: var(--brand-yellow);

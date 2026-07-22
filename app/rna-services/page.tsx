@@ -1,14 +1,14 @@
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
-export default function RnaTravelsPage() {
+export default function RnaServicesPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white font-mont overflow-hidden">
       {/* Hero Section */}
       <section className="relative w-full min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-end bg-black pb-20 md:pb-28">
         <Image
-          src="/assets/images/flight-1.jpg"
-          alt="Flight Background"
+          src="/assets/images/card-services.jpg"
+          alt="RNA Services Background"
           fill
           className="object-cover opacity-60"
           priority
@@ -16,15 +16,15 @@ export default function RnaTravelsPage() {
         <div className="z-10 flex flex-col items-center mt-32 md:mt-48">
           <div className="relative w-56 h-56 md:w-80 md:h-80 mb-2 md:mb-4 drop-shadow-2xl">
             <Image
-              src="/assets/images/RNA-Travels-02.png"
-              alt="RNA Travels Logo"
+              src="/assets/images/RNA-Services-02.png"
+              alt="RNA Services Logo"
               fill
               className="object-cover scale-130"
               priority
             />
           </div>
           <h1 className="text-white text-2xl md:text-4xl lg:text-4xl tracking-[0.1em] font-normal uppercase text-center px-4 drop-shadow-lg">
-            RNA Travels (Booking Company)
+            RNA SERVICES (CONSULTANCY FIRM)
           </h1>
         </div>
       </section>
@@ -44,19 +44,19 @@ export default function RnaTravelsPage() {
           </h2>
           <div className="space-y-6 md:space-y-8 text-[var(--deep-teal)] text-lg md:text-xl leading-relaxed">
             <p>
-              Welcome to RNA Travels, your trusted travel partner in Jeddah, dedicated to making every journey simple, affordable, and stress-free. With years of experience in the travel industry, we provide complete travel solutions including airline ticket bookings, hotel reservations, holiday packages, guided tours, and visa processing services for individuals, families, and corporate clients.
+              Welcome to RNA Services, your trusted partner for government processing, documentation, and consultancy services in Jeddah, Saudi Arabia. We are dedicated to simplifying complex administrative procedures by providing reliable, efficient, and professional support to individuals, families, and businesses.
             </p>
             <p>
-              At RNA Travels, we believe that travel should be convenient and accessible for everyone. Whether you are planning a business trip, family vacation, religious journey, or an international getaway, our experienced team is committed to finding the best travel options tailored to your needs and budget.
+              With extensive knowledge of local regulations and government requirements, our team assists clients with a wide range of processing and consultancy needs, ensuring that applications, documentation, and official procedures are handled accurately and efficiently. We understand that navigating government processes can be time-consuming, which is why we focus on delivering seamless solutions that save our clients valuable time and effort.
             </p>
             <p>
-              We proudly offer exclusive travel deals and special offers across GCC countries, helping our customers enjoy exceptional value on flights, accommodations, and tour packages throughout the region. Our strong network of travel partners enables us to deliver reliable service, competitive pricing, and seamless travel experiences.
+              At RNA Services, we pride ourselves on our commitment to transparency, professionalism, and customer satisfaction. Our personalized approach allows us to understand each client's unique requirements and provide guidance tailored to their specific needs.
             </p>
             <p>
-              From your first inquiry to your final destination, RNA Travels is committed to providing professional support, personalized service, and unforgettable travel experiences every step of the way.
+              Whether you require assistance with official documentation, administrative procedures, or professional consultancy services, RNA Services is committed to providing dependable support every step of the way.
             </p>
             <p className="font-medium text-[var(--dark-slate)]">
-              RNA Travels – Your Journey, Our Priority.
+              RNA Services – Simplifying Processes, Delivering Solutions.
             </p>
           </div>
         </div>

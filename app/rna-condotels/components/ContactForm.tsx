@@ -68,21 +68,22 @@ export default function ContactForm() {
             <option value="information" className="bg-[var(--deep-teal)] text-white">Information Purpose</option>
             <option value="suggestion" className="bg-[var(--deep-teal)] text-white">Suggestion</option>
             <option value="complaint" className="bg-[var(--deep-teal)] text-white">Complaint</option>
-            <option value="booking" className="bg-[var(--deep-teal)] text-white">Booking Inquiry</option>
+            <option value="booking" className="bg-[var(--deep-teal)] text-white">Short-term Booking</option>
+            <option value="longterm" className="bg-[var(--deep-teal)] text-white">Long-term Stay Inquiry</option>
           </select>
         </div>
       </div>
 
-      {reason === 'booking' && (
+      {(reason === 'booking' || reason === 'longterm') && (
         <div className="animate-in fade-in slide-in-from-top-4 duration-500">
-          <label htmlFor="destination" className="block text-sm font-medium mb-2 uppercase tracking-wider">
-            Destination / Travel Dates (Specific Details)
+          <label htmlFor="stay-details" className="block text-sm font-medium mb-2 uppercase tracking-wider">
+            Check-in/Check-out Dates & Apartment Type
           </label>
           <input
             type="text"
-            id="destination"
+            id="stay-details"
             className="w-full p-3 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/50 focus:outline-none focus:border-[var(--brand-orange)] transition-colors"
-            placeholder="E.g., Dubai, Next Month"
+            placeholder="E.g., Oct 1 - Oct 15, 2-bedroom"
             required
           />
         </div>

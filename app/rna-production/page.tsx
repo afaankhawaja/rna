@@ -1,14 +1,14 @@
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
-export default function RnaTravelsPage() {
+export default function RnaProductionPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white font-mont overflow-hidden">
       {/* Hero Section */}
       <section className="relative w-full min-h-[60vh] md:min-h-[75vh] flex flex-col items-center justify-end bg-black pb-20 md:pb-28">
         <Image
-          src="/assets/images/flight-1.jpg"
-          alt="Flight Background"
+          src="/assets/images/card-production.jpg"
+          alt="RNA Production Background"
           fill
           className="object-cover opacity-60"
           priority
@@ -16,15 +16,15 @@ export default function RnaTravelsPage() {
         <div className="z-10 flex flex-col items-center mt-32 md:mt-48">
           <div className="relative w-56 h-56 md:w-80 md:h-80 mb-2 md:mb-4 drop-shadow-2xl">
             <Image
-              src="/assets/images/RNA-Travels-02.png"
-              alt="RNA Travels Logo"
+              src="/assets/images/RNA-Production-02.png"
+              alt="RNA Production Logo"
               fill
               className="object-cover scale-130"
               priority
             />
           </div>
           <h1 className="text-white text-2xl md:text-4xl lg:text-4xl tracking-[0.1em] font-normal uppercase text-center px-4 drop-shadow-lg">
-            RNA Travels (Booking Company)
+            RNA PRODUCTION (PHOTOGRAPHY STUDIO)
           </h1>
         </div>
       </section>
@@ -44,19 +44,19 @@ export default function RnaTravelsPage() {
           </h2>
           <div className="space-y-6 md:space-y-8 text-[var(--deep-teal)] text-lg md:text-xl leading-relaxed">
             <p>
-              Welcome to RNA Travels, your trusted travel partner in Jeddah, dedicated to making every journey simple, affordable, and stress-free. With years of experience in the travel industry, we provide complete travel solutions including airline ticket bookings, hotel reservations, holiday packages, guided tours, and visa processing services for individuals, families, and corporate clients.
+              Welcome to RNA Production, a creative photography and videography company based in Jeddah, Saudi Arabia, dedicated to capturing life's most memorable moments with creativity, passion, and professionalism. We specialize in producing high-quality visual content that tells compelling stories and preserves memories that last a lifetime.
             </p>
             <p>
-              At RNA Travels, we believe that travel should be convenient and accessible for everyone. Whether you are planning a business trip, family vacation, religious journey, or an international getaway, our experienced team is committed to finding the best travel options tailored to your needs and budget.
+              Our services include wedding photography and videography, event photography and videography, model photography, and fashion photography for individuals, brands, designers, and businesses looking to showcase their vision through stunning imagery. From weddings and corporate events to fashion campaigns and portfolio shoots, our team combines artistic creativity with professional expertise to deliver exceptional results.
             </p>
             <p>
-              We proudly offer exclusive travel deals and special offers across GCC countries, helping our customers enjoy exceptional value on flights, accommodations, and tour packages throughout the region. Our strong network of travel partners enables us to deliver reliable service, competitive pricing, and seamless travel experiences.
+              At RNA Production, we believe every project is unique. We work closely with our clients to understand their style, goals, and expectations, ensuring every photograph and video reflects their personality and vision. Using modern equipment, creative techniques, and a commitment to excellence, we create visuals that leave a lasting impression.
             </p>
             <p>
-              From your first inquiry to your final destination, RNA Travels is committed to providing professional support, personalized service, and unforgettable travel experiences every step of the way.
+              Whether you are celebrating a wedding, hosting a special event, building a modeling portfolio, launching a fashion collection, or creating content for your brand, RNA Production is dedicated to bringing your story to life through powerful and captivating imagery.
             </p>
             <p className="font-medium text-[var(--dark-slate)]">
-              RNA Travels – Your Journey, Our Priority.
+              RNA Production – Capturing Moments, Creating Memories.
             </p>
           </div>
         </div>

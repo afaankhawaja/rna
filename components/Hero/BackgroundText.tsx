@@ -90,7 +90,7 @@ const BackgroundText = () => {
         {WORDS.map((word, i) => (
           <span
             key={word}
-            ref={(el) => (probeRefs.current[i] = el)}
+            ref={(el) => { probeRefs.current[i] = el; }}
             className="uppercase font-mont tracking-tight whitespace-nowrap"
             style={{ fontSize: REFERENCE_SIZE, lineHeight: LINE_HEIGHT }}
           >
