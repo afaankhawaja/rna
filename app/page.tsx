@@ -2,7 +2,6 @@ import Hero from "@/components/Hero/Hero";
 import Banner from "@/components/Banner/Banner";
 import About from "@/components/About/About";
 import BusinessGrid from "@/components/Business/BusinessGrid";
-import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -15,8 +14,6 @@ export default function Home() {
       <About />
 
       <BusinessGrid />
-
-      <Footer />
 
     </main>
   );

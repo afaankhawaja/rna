@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { arvo, lato ,mont} from "./fonts";
 import "./globals.css";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +18,10 @@ export default function RootLayout({
       lang="en"
       className={`${arvo.variable} ${lato.variable} ${mont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
-

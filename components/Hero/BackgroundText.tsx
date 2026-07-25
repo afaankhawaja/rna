@@ -17,6 +17,7 @@ const BackgroundText = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const probeRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const [fontSize, setFontSize] = useState(0);
+  const [repetitions, setRepetitions] = useState(1);
 
   const recalculate = useCallback(() => {
     const container = containerRef.current;
@@ -32,21 +33,30 @@ const BackgroundText = () => {
     if (metrics.some((m) => !m || !m.width || !m.height)) return;
 
     // constraint 1: widest word must fit within the container width
-    // (container is already w-[85%] of the parent, so hitting 100% of
-    // containerWidth means ~85% of total parent width)
     const maxWidth = Math.max(...metrics.map((m) => m!.width));
     const scaleByWidth = containerWidth / maxWidth;
 
-    // constraint 2: total stacked height (using compressed line-height,
-    // not raw glyph height) can't exceed containerHeight * allowance
+    // constraint 2: total stacked height
     const rowHeight = REFERENCE_SIZE * LINE_HEIGHT;
     const totalHeight = rowHeight * WORDS.length;
     const totalGap = GAP_PX * (WORDS.length - 1);
     const allowedHeight = containerHeight * MAX_OVERFLOW_FACTOR;
     const scaleByHeight = (allowedHeight - totalGap) / totalHeight;
 
-    const scale = Math.min(scaleByWidth, scaleByHeight);
-    setFontSize(REFERENCE_SIZE * scale);
+    const isPortrait = containerHeight > containerWidth;
+    let finalScale = Math.min(scaleByWidth, scaleByHeight);
+    let reps = 1;
+
+    if (isPortrait) {
+      finalScale = scaleByWidth;
+      const actualRowHeight = rowHeight * finalScale;
+      // Calculate how many rows needed to fill containerHeight
+      const neededRows = (containerHeight + GAP_PX) / (actualRowHeight + GAP_PX);
+      reps = Math.max(1, Math.ceil(neededRows / WORDS.length));
+    }
+
+    setRepetitions(reps);
+    setFontSize(REFERENCE_SIZE * finalScale);
   }, []);
 
   useLayoutEffect(() => {
@@ -60,6 +70,8 @@ const BackgroundText = () => {
     return () => ro.disconnect();
   }, [recalculate]);
 
+  const displayWords = Array(repetitions).fill(WORDS).flat();
+
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
       <div
@@ -67,9 +79,9 @@ const BackgroundText = () => {
         className="absolute right-0 top-0 bottom-0 w-[85%] flex flex-col items-end justify-center text-white/8 uppercase font-mont"
         style={{ gap: `${GAP_PX}px` }}
       >
-        {WORDS.map((word) => (
+        {displayWords.map((word, index) => (
           <span
-            key={word}
+            key={`${word}-${index}`}
             className="whitespace-nowrap tracking-tight"
             style={{
               fontSize: fontSize ? `${fontSize}px` : 0,

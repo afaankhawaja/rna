@@ -43,5 +43,8 @@
     --foreground: #f3f4f6;
   }
 }
+body{
+  scroll-behavior: smooth;
+}
 
 

@@ -5,6 +5,7 @@ import SectionHeading from "../Shared/SectionHeading";
 const About = () => {
   return (
     <section
+      id="about"
       className="
       bg-white
       py-20

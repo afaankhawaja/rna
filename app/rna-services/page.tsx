@@ -30,7 +30,7 @@ export default function RnaServicesPage() {
       </section>
 
       {/* Slanted Divider / About Us Section */}
-      <section className="relative bg-white pt-10 md:pt-2 pb-24 md:pb-32 px-6 md:px-12 lg:px-10">
+      <section id="about" className="relative bg-white pt-10 md:pt-2 pb-24 md:pb-32 px-6 md:px-12 lg:px-10">
         {/* Slanted element at the top using CSS clip-path */}
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform -translate-y-[99%]">
           <svg className="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[90px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -63,7 +63,7 @@ export default function RnaServicesPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="relative bg-[var(--deep-teal)] pt-16 md:pt-20 pb-24 md:pb-32 px-6 md:px-12 lg:px-24">
+      <section id="contact" className="relative bg-[var(--deep-teal)] pt-16 md:pt-20 pb-24 md:pb-32 px-6 md:px-12 lg:px-24">
         {/* Slanted element connecting white and teal section */}
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform -translate-y-[99%]">
           <svg className="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[90px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

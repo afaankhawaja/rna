@@ -10,7 +10,8 @@ interface Props {
         mx-auto
         px-6
         sm:px-8
-        lg:px-0
+        md:px-6
+        lg:px-6
         xl:px-0
         relative z-10
         "

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   FaFacebookF,
   FaInstagram,
@@ -8,8 +11,29 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  // Default contact info
+  let email = "info@rna-ksa.com";
+  let phone = "+966 50 000 0000"; // Generic number
+
+  // Update contact info based on the current page
+  if (pathname === "/rna-travels") {
+    email = "travels@rna-ksa.com";
+    phone = "+966 50 111 1111"; // Example specific number
+  } else if (pathname === "/rna-services") {
+    email = "services@rna-ksa.com";
+    phone = "+966 50 222 2222";
+  } else if (pathname === "/rna-condotels") {
+    email = "condotels@rna-ksa.com";
+    phone = "+966 50 333 3333";
+  } else if (pathname === "/rna-production") {
+    email = "production@rna-ksa.com";
+    phone = "+966 50 444 4444";
+  }
+
   return (
-    <footer className="bg-(--deep-teal) font-mont text-(--neutral-white) mt-20">
+    <footer id="contact" className="bg-(--deep-teal) font-mont text-(--neutral-white) mt-20">
 
       {/* Main Footer */}
 
@@ -21,13 +45,13 @@ const Footer = () => {
 
           <div>
 
-            <div className="relative w-28 h-28 mb-5 -ml-7">
+            <div className="relative w-28 h-26 mb-5 -ml-5">
 
               <Image
-                src="/assets/icons/RNA All Logos-02.svg"
+                src="/assets/icons/RNA All Logos-02-cropped.svg"
                 alt="Company Logo"
                 fill
-                className="object-contain"
+                className="object-contain pt-1.5"
               />
 
             </div>
@@ -55,19 +79,37 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link href="#" className="hover:text-(--neutral-white) transition">
-                  About
+                <Link href="#about" className="hover:text-(--neutral-white) transition">
+                  About Us
                 </Link>
               </li>
 
               <li>
-                <Link href="#" className="hover:text-(--neutral-white) transition">
-                  Services
+                <Link href="/rna-travels" className="hover:text-(--neutral-white) transition">
+                  RNA Travels
                 </Link>
               </li>
 
               <li>
-                <Link href="#" className="hover:text-(--neutral-white) transition">
+                <Link href="/rna-condotels" className="hover:text-(--neutral-white) transition">
+                  RNA Condotel
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/rna-production" className="hover:text-(--neutral-white) transition">
+                  RNA Production
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/rna-services" className="hover:text-(--neutral-white) transition">
+                  RNA Services
+                </Link>
+              </li>
+
+              <li>
+                <Link href="#contact" className="hover:text-(--neutral-white) transition">
                   Contact
                 </Link>
               </li>
@@ -88,9 +130,9 @@ const Footer = () => {
 
               <p>8376 Hail St. Al Baghdadia, Jeddah, Saudi Arabia </p>
 
-              <p>+92 300 0000000</p>
+              <p>{phone}</p>
 
-              <p>info@company.com</p>
+              <p>{email}</p>
 
             </div>
 
