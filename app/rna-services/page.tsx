@@ -39,10 +39,10 @@ export default function RnaServicesPage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl text-[var(--deep-teal)] font-medium mb-6 md:mb-10 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-mont uppercase text-(--deep-teal) mb-10">
             About Us
           </h2>
-          <div className="space-y-6 md:space-y-8 text-[var(--deep-teal)] text-lg md:text-xl leading-relaxed">
+          <div className="space-y-4 text-(--deep-teal) leading-8 text-base font-mont font-normal lg:text-lg">
             <p>
               Welcome to RNA Services, your trusted partner for government processing, documentation, and consultancy services in Jeddah, Saudi Arabia. We are dedicated to simplifying complex administrative procedures by providing reliable, efficient, and professional support to individuals, families, and businesses.
             </p>

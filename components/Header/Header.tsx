@@ -25,9 +25,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm font-mont border-b border-(--cool-gray)/20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="relative w-28 h-12 flex items-center">
+        <Link href="/" className="relative w-12 h-12 flex items-center">
           <Image
-            src="/assets/icons/RNA All Logos-02-cropped.svg"
+            src="/assets/icons/RNA All Logos-01-cropped.svg"
             alt="Company Logo"
             fill
             className="object-contain"

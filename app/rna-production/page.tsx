@@ -39,10 +39,10 @@ export default function RnaProductionPage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl text-[var(--deep-teal)] font-medium mb-6 md:mb-10 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-mont uppercase text-(--deep-teal) mb-10">
             About Us
           </h2>
-          <div className="space-y-6 md:space-y-8 text-[var(--deep-teal)] text-lg md:text-xl leading-relaxed">
+          <div className="space-y-4 text-(--deep-teal) leading-8 text-base font-mont font-normal lg:text-lg">
             <p>
               Welcome to RNA Production, a creative photography and videography company based in Jeddah, Saudi Arabia, dedicated to capturing life's most memorable moments with creativity, passion, and professionalism. We specialize in producing high-quality visual content that tells compelling stories and preserves memories that last a lifetime.
             </p>

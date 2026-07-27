@@ -39,10 +39,10 @@ export default function RnaCondotelsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl text-[var(--deep-teal)] font-medium mb-6 md:mb-10 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-mont uppercase text-(--deep-teal) mb-10">
             About Us
           </h2>
-          <div className="space-y-6 md:space-y-8 text-[var(--deep-teal)] text-lg md:text-xl leading-relaxed">
+          <div className="space-y-4 text-(--deep-teal) leading-8 text-base font-mont font-normal lg:text-lg">
             <p>
               Welcome to RNA Condotel, where comfort, convenience, and quality living come together to create a truly exceptional stay experience. Located on Old Makkah Road, Jeddah, Saudi Arabia, 22525, RNA Condotel offers modern and fully furnished service apartments designed for both short-term and long-term stays.
             </p>

@@ -39,10 +39,10 @@ export default function RnaTravelsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl text-[var(--deep-teal)] font-medium mb-6 md:mb-10 uppercase tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-mont uppercase text-(--deep-teal) mb-10">
             About Us
           </h2>
-          <div className="space-y-6 md:space-y-8 text-[var(--deep-teal)] text-lg md:text-xl leading-relaxed">
+          <div className="space-y-4 text-(--deep-teal) leading-8 text-base font-mont font-normal lg:text-lg">
             <p>
               Welcome to RNA Travels, your trusted travel partner in Jeddah, dedicated to making every journey simple, affordable, and stress-free. With years of experience in the travel industry, we provide complete travel solutions including airline ticket bookings, hotel reservations, holiday packages, guided tours, and visa processing services for individuals, families, and corporate clients.
             </p>
