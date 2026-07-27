@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { arvo, lato ,mont} from "./fonts";
 import "./globals.css";
+import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
       className={`${arvo.variable} ${lato.variable} ${mont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Header />
         {children}
         <Footer />
       </body>
