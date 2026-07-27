@@ -1,6 +1,16 @@
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "RNA Condotels",
+  description: "RNA Condotels provides modern and fully furnished service apartments in Jeddah, Saudi Arabia, designed for both short-term and long-term stays.",
+  alternates: {
+    canonical: "/rna-condotels",
+  },
+};
+
 export default function RnaCondotelsPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white font-mont overflow-hidden">

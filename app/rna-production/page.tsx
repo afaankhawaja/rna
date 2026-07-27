@@ -1,6 +1,16 @@
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "RNA Production",
+  description: "RNA Production is a creative photography and videography company in Jeddah, Saudi Arabia, specializing in weddings, events, modeling, and fashion.",
+  alternates: {
+    canonical: "/rna-production",
+  },
+};
+
 export default function RnaProductionPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white font-mont overflow-hidden">

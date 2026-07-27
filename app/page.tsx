@@ -3,6 +3,14 @@ import Banner from "@/components/Banner/Banner";
 import About from "@/components/About/About";
 import BusinessGrid from "@/components/Business/BusinessGrid";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
