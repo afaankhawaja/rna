@@ -11,7 +11,7 @@ const LINE_HEIGHT = 0.64;
 
 const GAP_PX = 55;
 
-const MAX_OVERFLOW_FACTOR = 1.3;
+const MAX_OVERFLOW_FACTOR = 1.0;
 
 const BackgroundText = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,9 +32,10 @@ const BackgroundText = () => {
     );
     if (metrics.some((m) => !m || !m.width || !m.height)) return;
 
-    // constraint 1: widest word must fit within the container width
-    const maxWidth = Math.max(...metrics.map((m) => m!.width));
-    const scaleByWidth = containerWidth / maxWidth;
+    // constraint 1: fit "ARABIA" perfectly so it doesn't leave a gap on the right.
+    // other words might overflow and get cut on the right.
+    const arabiaWidth = metrics[2]!.width;
+    const scaleByWidth = containerWidth / arabiaWidth;
 
     // constraint 2: total stacked height
     const rowHeight = REFERENCE_SIZE * LINE_HEIGHT;
@@ -44,7 +45,7 @@ const BackgroundText = () => {
     const scaleByHeight = (allowedHeight - totalGap) / totalHeight;
 
     const isPortrait = containerHeight > containerWidth;
-    let finalScale = Math.min(scaleByWidth, scaleByHeight);
+    let finalScale = Math.max(scaleByWidth, scaleByHeight);
     let reps = 1;
 
     if (isPortrait) {
@@ -73,20 +74,21 @@ const BackgroundText = () => {
   const displayWords = Array(repetitions).fill(WORDS).flat();
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
+    <div className="absolute inset-0 pointer-events-none select-none z-0">
       <div
         ref={containerRef}
-        className="absolute right-0 top-0 bottom-0 w-[85%] flex flex-col items-end justify-center text-white/8 uppercase font-mont"
+        className="absolute right-0 top-0 bottom-0 w-[95%] md:w-[90%] lg:w-[85%] overflow-hidden flex flex-col items-start justify-center text-white/8 uppercase font-mont font-bold"
         style={{ gap: `${GAP_PX}px` }}
       >
         {displayWords.map((word, index) => (
           <span
             key={`${word}-${index}`}
-            className="whitespace-nowrap tracking-tight"
+            className={`whitespace-nowrap tracking-tight font-bold ${word === 'NEW' ? 'self-end' : ''}`}
             style={{
               fontSize: fontSize ? `${fontSize}px` : 0,
               lineHeight: LINE_HEIGHT,
               visibility: fontSize ? "visible" : "hidden",
+              paddingLeft: word === 'RISING' ? '0.8em' : '0',
             }}
           >
             {word}
@@ -103,8 +105,12 @@ const BackgroundText = () => {
           <span
             key={word}
             ref={(el) => { probeRefs.current[i] = el; }}
-            className="uppercase font-mont tracking-tight whitespace-nowrap"
-            style={{ fontSize: REFERENCE_SIZE, lineHeight: LINE_HEIGHT }}
+            className="uppercase font-mont tracking-tight whitespace-nowrap font-bold"
+            style={{ 
+              fontSize: REFERENCE_SIZE, 
+              lineHeight: LINE_HEIGHT,
+              paddingLeft: word === 'RISING' ? '0.8em' : '0',
+            }}
           >
             {word}
           </span>

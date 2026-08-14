@@ -17,9 +17,8 @@ export default function Home() {
 
       <Hero />
 
-      <Banner />
-
       <About />
+      <Banner />
 
       <BusinessGrid />
 

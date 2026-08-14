@@ -38,6 +38,15 @@ export default function RnaTravelsPage() {
           </svg>
         </div>
 
+        <div className="absolute inset-0 z-0 opacity-5 translate-y-26">
+          <Image 
+            src="/assets/icons/rna-backgroun-text.svg" 
+            alt="background logo" 
+            fill 
+            className="object-contain scale-[225%] rotate-12" 
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-mont uppercase text-(--deep-teal) mb-10">
             About Us
@@ -55,7 +64,7 @@ export default function RnaTravelsPage() {
             <p>
               From your first inquiry to your final destination, RNA Travels is committed to providing professional support, personalized service, and unforgettable travel experiences every step of the way.
             </p>
-            <p className="font-medium text-[var(--dark-slate)]">
+            <p className="font-bold text-[var(--dark-slate)]">
               RNA Travels – Your Journey, Our Priority.
             </p>
           </div>

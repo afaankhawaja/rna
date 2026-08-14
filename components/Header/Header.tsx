@@ -27,7 +27,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/" className="relative w-12 h-12 flex items-center">
           <Image
-            src="/assets/icons/RNA All Logos-01-cropped.svg"
+            src="/assets/icons/RNA-Emblem-black-cropped.svg"
             alt="Company Logo"
             fill
             className="object-contain"

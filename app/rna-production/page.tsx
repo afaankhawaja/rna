@@ -20,7 +20,7 @@ export default function RnaProductionPage() {
           src="/assets/images/card-production.jpg"
           alt="RNA Production Background"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-60 object-[center_28%]"
           priority
         />
         <div className="z-10 flex flex-col items-center mt-32 md:mt-48">
@@ -48,6 +48,15 @@ export default function RnaProductionPage() {
           </svg>
         </div>
 
+        <div className="absolute inset-0 z-0 opacity-5 translate-y-26">
+          <Image 
+            src="/assets/icons/rna-backgroun-text.svg" 
+            alt="background logo" 
+            fill 
+            className="object-contain scale-[225%] rotate-12" 
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-mont uppercase text-(--deep-teal) mb-10">
             About Us
@@ -65,7 +74,7 @@ export default function RnaProductionPage() {
             <p>
               Whether you are celebrating a wedding, hosting a special event, building a modeling portfolio, launching a fashion collection, or creating content for your brand, RNA Production is dedicated to bringing your story to life through powerful and captivating imagery.
             </p>
-            <p className="font-medium text-[var(--dark-slate)]">
+            <p className="font-bold text-[var(--dark-slate)]">
               RNA Production – Capturing Moments, Creating Memories.
             </p>
           </div>

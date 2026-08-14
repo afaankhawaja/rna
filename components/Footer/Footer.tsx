@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
 
@@ -14,7 +13,7 @@ const Footer = () => {
   const pathname = usePathname();
 
   // Default contact info
-  let email = "info@rna-ksa.com";
+  let email = "contact@rna-ksa.com";
   let phone = "+966 50 000 0000"; // Generic number
 
   // Update contact info based on the current page
@@ -25,7 +24,7 @@ const Footer = () => {
     email = "services@rna-ksa.com";
     phone = "+966 50 222 2222";
   } else if (pathname === "/rna-condotels") {
-    email = "condotels@rna-ksa.com";
+    email = "condotel@rna-ksa.com";
     phone = "+966 50 333 3333";
   } else if (pathname === "/rna-production") {
     email = "production@rna-ksa.com";
@@ -45,10 +44,10 @@ const Footer = () => {
 
           <div>
 
-            <div className="relative w-28 h-26 mb-5 -ml-5">
+            <div className="relative w-28 h-26 mb-5 -ml-4">
 
               <Image
-                src="/assets/icons/RNA All Logos-02-cropped.svg"
+                src="/assets/icons/RNA-Emblem-white-cropped.svg"
                 alt="Company Logo"
                 fill
                 className="object-contain pt-1.5"
@@ -162,19 +161,14 @@ const Footer = () => {
                 <FaInstagram />
               </a>
 
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
-              >
-                <FaLinkedinIn />
-              </a>
-
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
-              >
-                <FaYoutube />
-              </a>
+              {pathname === "/rna-condotels" && (
+                <a
+                  href="#"
+                  className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
+                >
+                  <FaYoutube />
+                </a>
+              )}
 
             </div>
 
