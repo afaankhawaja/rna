@@ -4,15 +4,58 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [reason, setReason] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate form submission
-    alert("Thank you! Your message has been sent successfully.");
+    setStatus("loading");
+    const form = e.currentTarget;
+
+    const getVal = (id: string) => (document.getElementById(id) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement)?.value || "";
+    
+    const data = {
+      name: getVal("name"),
+      email: getVal("email"),
+      phone: getVal("phone"),
+      reason: getVal("reason"),
+      stayDetails: getVal("stay-details"),
+      message: getVal("message"),
+      sourcePage: "condotels",
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+        setReason("");
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error", error);
+      setStatus("error");
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="w-full space-y-6 text-neutral-white">
+      {status === "success" && (
+        <div className="p-4 bg-green-500/20 border border-green-500 rounded-md text-green-100">
+          Thank you! Your message has been sent successfully.
+        </div>
+      )}
+      {status === "error" && (
+        <div className="p-4 bg-red-500/20 border border-red-500 rounded-md text-red-100">
+          There was an error sending your message. Please try again later.
+        </div>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2 uppercase tracking-wider">
@@ -104,9 +147,10 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full md:w-auto px-8 py-4 bg-[var(--brand-orange)] hover:opacity-90 text-white font-bold rounded-md transition-all transform hover:-translate-y-1 shadow-lg uppercase tracking-widest"
+        disabled={status === "loading"}
+        className="w-full md:w-auto px-8 py-4 bg-[var(--brand-orange)] hover:opacity-90 text-white font-bold rounded-md transition-all transform hover:-translate-y-1 shadow-lg uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Submit
+        {status === "loading" ? "Sending..." : "Submit"}
       </button>
     </form>
   );
