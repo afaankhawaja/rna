@@ -88,7 +88,7 @@ export default function RnaServicesPage() {
             <ContactForm />
             <div className="w-full min-h-[400px] lg:min-h-full rounded-lg overflow-hidden shadow-2xl relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467794.69747209776!2d39.066498522307525!3d21.543419574883307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118ab!2sJeddah%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1714246830000!5m2!1sen!2sus"
+                src="https://maps.google.com/maps?q=21.5076533,39.1768468&hl=en&z=14&output=embed"
                 className="absolute inset-0 w-full h-full border-0"
                 allowFullScreen={true}
                 loading="lazy"

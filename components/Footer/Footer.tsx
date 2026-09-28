@@ -15,6 +15,8 @@ const Footer = () => {
   // Default contact info
   let email = "contact@rna-ksa.com";
   let phone = "+966 50 000 0000"; // Generic number
+  let facebookLink = "https://www.facebook.com/profile.php?id=61594794484647";
+  let instagramLink = "https://www.instagram.com/rna__traders/";
 
   // Update contact info based on the current page
   if (pathname === "/rna-travels") {
@@ -29,10 +31,33 @@ const Footer = () => {
   } else if (pathname === "/rna-production") {
     email = "production@rna-ksa.com";
     phone = "+966 50 444 4444";
+    facebookLink = "https://www.facebook.com/profile.php?id=61594993436026";
+    instagramLink = "https://www.instagram.com/rna__production/";
   }
 
   return (
-    <footer id="contact" className="bg-(--deep-teal) font-mont text-(--neutral-white) mt-20">
+    <>
+      {/* Brand Text Rows — above footer (white bg) */}
+      <div className="w-full overflow-hidden mt-8 mb-8 bg-white">
+        {[-20, -140, -260].map((offsetPx, rowIndex) => (
+          <div
+            key={rowIndex}
+            className="whitespace-nowrap"
+            style={{ transform: `translateX(${offsetPx}px)`, fontSize: "14px", lineHeight: "14px" }}
+          >
+            {Array.from({ length: 16 }).map((_, i) => (
+              <span
+                key={i}
+                className="text-(--deep-teal) font-mont font-semibold uppercase tracking-[0.25em] mr-5"
+              >
+                RISING &nbsp;NEW &nbsp;ARABIA &nbsp;TRADERS
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <footer id="contact" className="bg-(--deep-teal) font-mont text-(--neutral-white)">
 
       {/* Main Footer */}
 
@@ -148,15 +173,19 @@ const Footer = () => {
             <div className="flex gap-4">
 
               <a
-                href="#"
+                href={facebookLink}
                 className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFacebookF />
               </a>
 
               <a
-                href="#"
+                href={instagramLink}
                 className="w-11 h-11 rounded-full bg-(--bright-teal) hover:bg-(--neutral-white) hover:text-(--deep-teal) transition flex items-center justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
@@ -177,6 +206,7 @@ const Footer = () => {
         </div>
 
       </div>
+
 
       {/* Bottom Footer */}
 
@@ -205,6 +235,7 @@ const Footer = () => {
       </div>
 
     </footer>
+    </>
   );
 };
 
