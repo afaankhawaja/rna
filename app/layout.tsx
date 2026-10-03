@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { arvo, lato ,mont} from "./fonts";
 import "./globals.css";
 import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import dynamic from "next/dynamic";
+const Footer = dynamic(() => import("@/components/Footer/Footer"));
 
 import JsonLd from "@/components/JsonLd/JsonLd";
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import ContactForm from "./components/ContactForm";
+import dynamic from "next/dynamic";
+const ContactForm = dynamic(() => import("./components/ContactForm"));
 
 import type { Metadata } from "next";
 
