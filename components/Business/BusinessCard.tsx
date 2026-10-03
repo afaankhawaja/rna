@@ -34,6 +34,7 @@ const BusinessCard = ({
         src={image}
         alt={title}
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="
         object-cover
         transition-transform
@@ -74,6 +75,7 @@ const BusinessCard = ({
             src={logo}
             alt="Logo"
             fill
+            sizes="(max-width: 768px) 150px, 300px"
             className="object-contain"
           />
         </div>

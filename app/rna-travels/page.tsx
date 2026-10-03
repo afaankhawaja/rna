@@ -1,6 +1,16 @@
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "RNA Travels",
+  description: "RNA Travels provides comprehensive travel and hospitality services, ensuring a smooth and memorable journey in Jeddah, KSA.",
+  alternates: {
+    canonical: "/rna-travels",
+  },
+};
+
 export default function RnaTravelsPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white font-mont overflow-hidden">

@@ -1,6 +1,16 @@
 import Image from "next/image";
 import ContactForm from "./components/ContactForm";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "RNA Services",
+  description: "RNA Services offers professional business support, consulting, and management solutions in Jeddah, Saudi Arabia.",
+  alternates: {
+    canonical: "/rna-services",
+  },
+};
+
 export default function RnaServicesPage() {
   return (
     <main className="flex flex-col min-h-screen bg-white font-mont overflow-hidden">
