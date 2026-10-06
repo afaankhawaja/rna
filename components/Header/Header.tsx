@@ -5,10 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { WHATSAPP_URL } from "../Shared/contact";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "About Us", path: "#about" },
+  { name: "About Us", path: "/#about" },
   { name: "RNA Travels", path: "/rna-travels" },
   { name: "RNA Condotel", path: "/rna-condotels" },
   { name: "RNA Production", path: "/rna-production" },
@@ -38,7 +39,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => {
-            const isActive = pathname === link.path && link.path !== "#about";
+            const isActive = pathname === link.path && link.path !== "/#about";
             return (
               <Link
                 key={link.name}
@@ -55,12 +56,14 @@ const Header = () => {
 
         {/* Desktop Contact CTA */}
         <div className="hidden lg:block">
-          <Link
-            href="#contact"
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-(--brand-orange) text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-(--brand-yellow) transition"
           >
             Contact Us
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -77,7 +80,7 @@ const Header = () => {
       {isOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-md border-t border-(--cool-gray)/20 flex flex-col px-6 py-4 gap-4">
           {navLinks.map((link) => {
-            const isActive = pathname === link.path && link.path !== "#about";
+            const isActive = pathname === link.path && link.path !== "/#about";
             return (
               <Link
                 key={link.name}
@@ -91,13 +94,15 @@ const Header = () => {
               </Link>
             );
           })}
-          <Link
-            href="#contact"
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="bg-(--brand-orange) text-white text-center px-6 py-3 mt-2 rounded-full text-base font-semibold hover:bg-(--brand-yellow) transition"
           >
             Contact Us
-          </Link>
+          </a>
         </div>
       )}
     </header>

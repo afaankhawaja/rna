@@ -8,37 +8,36 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import { PHONE_DISPLAY, PHONE_TEL } from "../Shared/contact";
 
 const Footer = () => {
   const pathname = usePathname();
 
   // Default contact info
+  const phone = PHONE_DISPLAY;
   let email = "contact@rna-ksa.com";
-  let phone = "+966 50 000 0000"; // Generic number
   let facebookLink = "https://www.facebook.com/profile.php?id=61594794484647";
   let instagramLink = "https://www.instagram.com/rna__traders/";
 
   // Update contact info based on the current page
   if (pathname === "/rna-travels") {
     email = "travels@rna-ksa.com";
-    phone = "+966 50 111 1111"; // Example specific number
   } else if (pathname === "/rna-services") {
     email = "services@rna-ksa.com";
-    phone = "+966 50 222 2222";
   } else if (pathname === "/rna-condotels") {
     email = "condotel@rna-ksa.com";
-    phone = "+966 50 333 3333";
   } else if (pathname === "/rna-production") {
     email = "production@rna-ksa.com";
-    phone = "+966 50 444 4444";
     facebookLink = "https://www.facebook.com/profile.php?id=61594993436026";
     instagramLink = "https://www.instagram.com/rna__production/";
   }
 
   return (
     <>
-      {/* Brand Text Rows — above footer (white bg) */}
-      <div className="w-full overflow-hidden mt-8 mb-8 bg-white">
+      <footer id="contact" className="bg-(--deep-teal) font-mont text-(--neutral-white)">
+
+      {/* Brand Text Rows — watermark style, flush with footer top */}
+      <div className="w-full overflow-hidden select-none pointer-events-none">
         {[-20, -140, -260].map((offsetPx, rowIndex) => (
           <div
             key={rowIndex}
@@ -48,7 +47,7 @@ const Footer = () => {
             {Array.from({ length: 16 }).map((_, i) => (
               <span
                 key={i}
-                className="text-(--deep-teal) font-mont font-semibold uppercase tracking-[0.25em] mr-5"
+                className="text-white/20 font-mont font-semibold uppercase tracking-[0.25em] mr-5"
               >
                 RISING &nbsp;NEW &nbsp;ARABIA &nbsp;TRADERS
               </span>
@@ -56,8 +55,6 @@ const Footer = () => {
           </div>
         ))}
       </div>
-
-      <footer id="contact" className="bg-(--deep-teal) font-mont text-(--neutral-white)">
 
       {/* Main Footer */}
 
@@ -103,7 +100,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link href="#about" className="hover:text-(--neutral-white) transition">
+                <Link href="/#about" className="hover:text-(--neutral-white) transition">
                   About Us
                 </Link>
               </li>
@@ -154,7 +151,7 @@ const Footer = () => {
 
               <p>8376 Hail St. Al Baghdadia, Jeddah, Saudi Arabia </p>
 
-              <p>{phone}</p>
+              <p><a href={`tel:${PHONE_TEL}`} className="hover:text-(--neutral-white) transition">{phone}</a></p>
 
               <p>{email}</p>
 
