@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { arvo, lato ,mont} from "./fonts";
 import "./globals.css";
 import Header from "@/components/Header/Header";
@@ -7,8 +7,15 @@ const Footer = dynamic(() => import("@/components/Footer/Footer"));
 
 import JsonLd from "@/components/JsonLd/JsonLd";
 
+export const viewport: Viewport = {
+  themeColor: "#005468",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rna-ksa.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "RNA Traders | Trusted Business Group in Jeddah, KSA",
     template: "%s | RNA Traders",

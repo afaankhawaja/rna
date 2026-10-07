@@ -70,7 +70,7 @@ const Footer = () => {
 
               <Image
                 src="/assets/icons/RNA-Emblem-white-cropped.svg"
-                alt="Company Logo"
+                alt="RNA Traders Logo"
                 fill
                 className="object-contain pt-1.5"
               />
@@ -212,7 +212,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
 
           <p className="text-sm text-(--accent-sky)">
-            © {new Date().getFullYear()} Company. All Rights Reserved.
+            © {new Date().getFullYear()} RNA Traders. All Rights Reserved.
           </p>
 
           <div className="flex gap-6 text-sm text-(--accent-sky)">
